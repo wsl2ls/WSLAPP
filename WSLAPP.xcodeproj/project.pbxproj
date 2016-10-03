@@ -195,6 +195,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3114F7601DA2520C009AC72E /* WSLAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WSLAPP.entitlements; sourceTree = "<group>"; };
 		BCE767A51BDC8AD70020D5E4 /* guid2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid2.png; sourceTree = "<group>"; };
 		BCE767A61BDC8AD70020D5E4 /* guid1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid1.png; sourceTree = "<group>"; };
 		BCE767A91BDC8B650020D5E4 /* guid4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid4.png; sourceTree = "<group>"; };
@@ -776,6 +777,7 @@
 		BCFB3A4A1BCE797700D516DC /* WSLAPP */ = {
 			isa = PBXGroup;
 			children = (
+				3114F7601DA2520C009AC72E /* WSLAPP.entitlements */,
 				DAA0FEEA1C00645B00BC607E /* screen.jpeg */,
 				BCFB3A4F1BCE797700D516DC /* AppDelegate.h */,
 				BCFB3A501BCE797700D516DC /* AppDelegate.m */,
@@ -1308,7 +1310,13 @@
 				TargetAttributes = {
 					BCFB3A471BCE797700D516DC = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = W47EBNCE5G;
+						DevelopmentTeam = 432VNC2Y8Q;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					BCFB3A601BCE797700D516DC = {
 						CreatedOnToolsVersion = 6.4;
@@ -1647,6 +1655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 432VNC2Y8Q;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1661,9 +1670,10 @@
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = wslcmk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5a054e6c-0ff4-4b93-8d32-1d60769d4e94";
+				PROVISIONING_PROFILE_SPECIFIER = chinadailyAppTestDevelopment;
 			};
 			name = Debug;
 		};
@@ -1673,6 +1683,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 432VNC2Y8Q;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1687,9 +1698,10 @@
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = wslcmk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5a054e6c-0ff4-4b93-8d32-1d60769d4e94";
+				PROVISIONING_PROFILE_SPECIFIER = chinadailyAppTestDevelopment;
 			};
 			name = Release;
 		};

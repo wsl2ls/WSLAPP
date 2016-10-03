@@ -84,6 +84,7 @@
         
         // info.plist -> NSLocationWhenInUseUsageDescription
         [self.locationManager requestWhenInUseAuthorization];
+        self.locationManager.allowsBackgroundLocationUpdates = YES;
     }
     [self.locationManager startUpdatingLocation];
 }

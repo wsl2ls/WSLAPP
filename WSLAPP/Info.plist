@@ -83,11 +83,18 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>是否允许此App使用你的相机</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>如果你喜欢我,请允许我定位吧！</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>是否允许此App访问你的相册</string>
+	<key>Privacy - Location Always Usage Description </key>
+	<string>我们需要通过您的地理位置信息获取您周边的相关数据</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
+		<string>location</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
