@@ -1676,7 +1676,7 @@
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wsl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5a054e6c-0ff4-4b93-8d32-1d60769d4e94";
 				PROVISIONING_PROFILE_SPECIFIER = chinadailyAppTestDevelopment;
@@ -1704,7 +1704,7 @@
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wsl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5a054e6c-0ff4-4b93-8d32-1d60769d4e94";
 				PROVISIONING_PROFILE_SPECIFIER = chinadailyAppTestDevelopment;

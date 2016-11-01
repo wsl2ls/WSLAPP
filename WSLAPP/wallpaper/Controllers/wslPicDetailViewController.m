@@ -58,7 +58,7 @@ typedef enum {
 }
 
 -(void)setting:(id)sender
-{
+{   [self.imageView.image zj_saveToPhotos];
     [self.sheet showInView:self.view];
     
 }
@@ -186,18 +186,18 @@ typedef enum {
     switch (buttonIndex)
     {
         case ImageActionAsHomeScreen:
-        {   [self.imageView.image zj_saveToPhotos];
+        {
             [self.imageView.image zj_saveAsHomeScreen];
         }
             break;
         case ImageActionAsLockScreen:
-        {   [self.imageView.image zj_saveToPhotos];
+        {
             [self.imageView.image zj_saveAsLockScreen];
         }
             break;
         case ImageActionAsBoth:
         {
-            [self.imageView.image zj_saveToPhotos];
+            
             [self.imageView.image zj_saveAsHomeScreenAndLockScreen];
             
         }
