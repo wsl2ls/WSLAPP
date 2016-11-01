@@ -3,7 +3,7 @@
 //  01CustomUITableViewCell
 //
 //  Created by 郝海圣 on 15/9/1.
-//  Copyright (c) 2015年 qianfeng. All rights reserved.
+//  Copyright (c) 2015年 王双龙. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

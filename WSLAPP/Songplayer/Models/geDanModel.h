@@ -2,7 +2,7 @@
 //  geDanModel.h
 //  SongPlayer
 //
-//  Created by qianfeng on 15/9/26.
+//  Created by 王双龙 on 15/9/26.
 //  Copyright (c) 2015年 王双龙. All rights reserved.
 //
 
