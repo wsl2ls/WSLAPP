@@ -12,14 +12,23 @@
 #import "UIImageView+WebCache.h"
 #import "UMSocial.h"
 
+#import "UIImage+ZJWallPaper.h"
 #import "picDetailModel.h"
 
-@interface wslPicDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate>
+typedef enum {
+    ImageActionAsHomeScreen = 0,
+    ImageActionAsLockScreen,
+    ImageActionAsBoth,
+    ImageActionAsPhoto
+}ImageAction;
+
+@interface wslPicDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate,UIActionSheetDelegate>
 
 @property(nonatomic,strong) UITableView * tableView;
 @property(nonatomic,strong) UIImageView * imageView;
 
 @property(nonatomic,strong) NSMutableArray * dataSource;
+@property(nonatomic, strong) UIActionSheet *sheet;
 @end
 
 @implementation wslPicDetailViewController
@@ -34,10 +43,11 @@
     self.view.backgroundColor =   [UIColor colorWithRed:255/255.0f green:192/255.0f blue:0/255.0f alpha:1.0f];
     [self.view  addSubview:self.imageView];
     [self.view   addSubview:self.tableView];
-    UIBarButtonItem * saveItem = [[UIBarButtonItem alloc]  initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveImageBarItemClick:) ];
+    UIBarButtonItem * saveItem = [[UIBarButtonItem alloc]  initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(setting:) ];
     UIBarButtonItem * shareItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStyleDone target:self action:@selector(shareClicked:)];
     
     self.navigationItem.rightBarButtonItems = @[saveItem ,shareItem];
+    
 }
 -(void)shareClicked:(id)sender
 {
@@ -47,10 +57,9 @@
     
 }
 
--(void)saveImageBarItemClick:(id)sender
+-(void)setting:(id)sender
 {
-    UIImage * image = self.imageView.image;
-    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+    [self.sheet showInView:self.view];
     
 }
 -(void)downloadData
@@ -111,6 +120,15 @@
         [self  addDoubleTapGesture:_imageView];
     }return _imageView;
 }
+
+-(UIActionSheet *)sheet
+{
+ if (_sheet == nil) {
+    _sheet =  [[UIActionSheet alloc] initWithTitle:@"设置壁纸" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil   otherButtonTitles:@"设为桌面壁纸",@"设为锁屏壁纸",@"设为锁屏和桌面壁纸",@"保存到照片库", nil];
+ }
+    return _sheet;
+}
+
 #pragma mark ----  添加手势
 -(void)addDoubleTapGesture:(UIView *)view{
     //创建点击事件
@@ -160,6 +178,38 @@
     if (_dataSource == nil) {
         _dataSource = [[NSMutableArray alloc] init];
     }return _dataSource;
+}
+#pragma mark  UIActionSheetDelegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex)
+    {
+        case ImageActionAsHomeScreen:
+        {   [self.imageView.image zj_saveToPhotos];
+            [self.imageView.image zj_saveAsHomeScreen];
+        }
+            break;
+        case ImageActionAsLockScreen:
+        {   [self.imageView.image zj_saveToPhotos];
+            [self.imageView.image zj_saveAsLockScreen];
+        }
+            break;
+        case ImageActionAsBoth:
+        {
+            [self.imageView.image zj_saveToPhotos];
+            [self.imageView.image zj_saveAsHomeScreenAndLockScreen];
+            
+        }
+            break;
+        case ImageActionAsPhoto:
+        {
+            [self.imageView.image zj_saveToPhotos];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 

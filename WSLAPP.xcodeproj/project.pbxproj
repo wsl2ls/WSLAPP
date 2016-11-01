@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3188652F1DC838D8009F03BB /* UIImage+ZJWallPaper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3188652E1DC838D8009F03BB /* UIImage+ZJWallPaper.m */; };
 		BCE767A71BDC8AD70020D5E4 /* guid2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE767A51BDC8AD70020D5E4 /* guid2.png */; };
 		BCE767A81BDC8AD70020D5E4 /* guid1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE767A61BDC8AD70020D5E4 /* guid1.png */; };
 		BCE767AA1BDC8B650020D5E4 /* guid4.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE767A91BDC8B650020D5E4 /* guid4.png */; };
@@ -196,6 +197,8 @@
 
 /* Begin PBXFileReference section */
 		3114F7601DA2520C009AC72E /* WSLAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WSLAPP.entitlements; sourceTree = "<group>"; };
+		3188652D1DC838D8009F03BB /* UIImage+ZJWallPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZJWallPaper.h"; sourceTree = "<group>"; };
+		3188652E1DC838D8009F03BB /* UIImage+ZJWallPaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZJWallPaper.m"; sourceTree = "<group>"; };
 		BCE767A51BDC8AD70020D5E4 /* guid2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid2.png; sourceTree = "<group>"; };
 		BCE767A61BDC8AD70020D5E4 /* guid1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid1.png; sourceTree = "<group>"; };
 		BCE767A91BDC8B650020D5E4 /* guid4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid4.png; sourceTree = "<group>"; };
@@ -1094,6 +1097,8 @@
 		BCFB3BB81BCE7A5C00D516DC /* Basics */ = {
 			isa = PBXGroup;
 			children = (
+				3188652D1DC838D8009F03BB /* UIImage+ZJWallPaper.h */,
+				3188652E1DC838D8009F03BB /* UIImage+ZJWallPaper.m */,
 				BCFB3C211BCE7B8300D516DC /* wslwallpaperViewController.h */,
 				BCFB3C221BCE7B8300D516DC /* wslwallpaperViewController.m */,
 				BCFB3C131BCE7B8300D516DC /* wslCategoryViewController.h */,
@@ -1451,6 +1456,7 @@
 				BCFB3B8E1BCE7A1F00D516DC /* UIImage+MultiFormat.m in Sources */,
 				BCF4FCFB1BD87F8100837AE4 /* AFURLSessionManager.m in Sources */,
 				BCFB3BF41BCE7AA700D516DC /* JGProgressHUDRingIndicatorView.m in Sources */,
+				3188652F1DC838D8009F03BB /* UIImage+ZJWallPaper.m in Sources */,
 				BCFB3B8F1BCE7A1F00D516DC /* UIImage+WebP.m in Sources */,
 				BCEE3BCB1BDBB3C5005A7099 /* QFURLRequest.m in Sources */,
 				BCFA0E3D1BD64050004D468D /* saoViewController.m in Sources */,
@@ -1670,7 +1676,7 @@
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5a054e6c-0ff4-4b93-8d32-1d60769d4e94";
 				PROVISIONING_PROFILE_SPECIFIER = chinadailyAppTestDevelopment;
@@ -1698,7 +1704,7 @@
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/WSLAPP/Libraries/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wsl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5a054e6c-0ff4-4b93-8d32-1d60769d4e94";
 				PROVISIONING_PROFILE_SPECIFIER = chinadailyAppTestDevelopment;
