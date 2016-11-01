@@ -142,8 +142,11 @@
 
         NSArray * pictureArray = jsonObj[@"data"];
         NSMutableArray * dataArray = pictureArray[0][@"data"];
-        for (int i = 0; i < 5  ; i++) {
+        for (int i = 0; i < dataArray.count ; i++) {
             NSDictionary * dict = dataArray[i];
+            if(dict == nil){
+               break;
+            }
             haiBaoModel * picModel = [[haiBaoModel alloc] init];
             picModel.ID = dict[@"action"][@"value"];
             picModel.type =  [NSString stringWithFormat:@"%@",dict[@"action"][@"type"]];

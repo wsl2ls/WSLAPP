@@ -162,6 +162,8 @@
 {
     //隐藏HUD
     [self.progressHUD dismissAnimated:YES];
+    
+    self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
