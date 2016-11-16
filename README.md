@@ -11,3 +11,5 @@ WSLAPP
 
 
 ![后台定位.png](http://upload-images.jianshu.io/upload_images/1708447-11b6e1f8bd8b33e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![新闻.gif](http://upload-images.jianshu.io/upload_images/1708447-1493b15c9417390c.gif?imageMogr2/auto-orient/strip)
