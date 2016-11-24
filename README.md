@@ -14,6 +14,7 @@ WSLAPP
 
 ![新闻.gif](http://upload-images.jianshu.io/upload_images/1708447-1493b15c9417390c.gif?imageMogr2/auto-orient/strip)
 
+![动画.gif](http://upload-images.jianshu.io/upload_images/1708447-c87aa5a3e1824cfe.gif?imageMogr2/auto-orient/strip)
 
 欢迎扫描下方二维码关注——iOS开发进阶之路——微信公众号：iOS2679114653
 本公众号是一个iOS开发者们的分享，交流，学习平台，会不定时的发送技术干货，源码,也欢迎大家积极踊跃投稿，(择优上头条) ^_^分享自己开发攻城的过程，心得，相互学习，共同进步，成为攻城狮中的翘楚！
