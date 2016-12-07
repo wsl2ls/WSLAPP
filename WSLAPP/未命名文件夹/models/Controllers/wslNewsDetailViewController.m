@@ -25,7 +25,9 @@
     
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"后退" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
     UIBarButtonItem *forwardItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(goForward)];
-    self.navigationItem.rightBarButtonItems = @[backItem,forwardItem];
+    UIBarButtonItem *fontItem = [[UIBarButtonItem alloc] initWithTitle:@"字体" style:UIBarButtonItemStyleDone target:self action:@selector(changSize)];
+    
+    self.navigationItem.rightBarButtonItems = @[backItem,forwardItem,fontItem];
     
       [self setupUI];
     
@@ -33,6 +35,15 @@
     CGRect rect = [[UIScreen mainScreen] bounds];
     rect.origin.y -= 50;
     [self.progressHUD showInRect:rect inView:self.view animated:YES];
+}
+- (void)changSize{
+    static int i = 20;
+    i = i+20;
+    if (i >= 100) {
+        i = 20;
+    }
+    NSString *jsString = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'",i];
+    [webView stringByEvaluatingJavaScriptFromString:jsString];
 }
 
 -(void)goBack
