@@ -13,7 +13,7 @@
 #import "UMSocialQQHandler.h"
 #import "UMSocialWechatHandler.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UIAlertViewDelegate>
 
 @end
 
@@ -113,13 +113,13 @@
 
 #pragma mark - 第三方登录回调方法
 
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return  [UMSocialSnsService handleOpenURL:url];
-}
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication
+//         annotation:(id)annotation
+//{
+//    return  [UMSocialSnsService handleOpenURL:url];
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     
@@ -147,6 +147,47 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+/**
+ iOS 9.0 以下
+ */
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+    NSLog(@"URL scheme:%@", [url scheme]);
+    NSLog(@"URL host:%@", [url host]);
+    return YES;
+}
+
+/**
+ iOS 9.0 以下
+ */
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation{
+    return YES;
+}
+
+/**
+ iOS 9.0 之后
+ 三方唤起本程序后执行的方法
+ return YES 表示允许唤起本程序
+ 
+ */
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
+    
+    NSLog(@"URL scheme:%@", [url scheme]);
+    //参数
+    NSLog(@"URL host:%@", [url host]);
+    
+    UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"分享" message:[url host] delegate:self cancelButtonTitle:nil otherButtonTitles:@"分享完成", nil];
+    [alertView show];
+    return YES;
+}
+                              
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    //返回URL scheme = wsl123456的主应用
+    NSURL * url = [NSURL URLWithString:@"wsl123456://success"];
+    [[UIApplication sharedApplication] openURL:url options:nil completionHandler:^(BOOL success) {
+    }];
 }
 
 @end

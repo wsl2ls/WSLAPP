@@ -6,6 +6,25 @@
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>WSL</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>image/jpg</string>
+			</array>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>appIcon</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>WSL</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.data</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -37,11 +56,25 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string></string>
 			<key>CFBundleURLName</key>
 			<string>QQZ</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tencent1104927471</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLIconFile</key>
+			<string>appIcon</string>
+			<key>CFBundleURLName</key>
+			<string>testShare</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>WSLAPP</string>
 			</array>
 		</dict>
 	</array>
@@ -107,6 +140,10 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict/>
 	</array>
 	<key>qq.com</key>
 	<dict>

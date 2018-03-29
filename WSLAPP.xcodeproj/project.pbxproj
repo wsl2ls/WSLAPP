@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3188652F1DC838D8009F03BB /* UIImage+ZJWallPaper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3188652E1DC838D8009F03BB /* UIImage+ZJWallPaper.m */; };
+		31EE274E206C8EEE00D1C347 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EE274D206C8EEE00D1C347 /* appIcon.png */; };
 		BCE767A71BDC8AD70020D5E4 /* guid2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE767A51BDC8AD70020D5E4 /* guid2.png */; };
 		BCE767A81BDC8AD70020D5E4 /* guid1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE767A61BDC8AD70020D5E4 /* guid1.png */; };
 		BCE767AA1BDC8B650020D5E4 /* guid4.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE767A91BDC8B650020D5E4 /* guid4.png */; };
@@ -199,6 +200,7 @@
 		3114F7601DA2520C009AC72E /* WSLAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WSLAPP.entitlements; sourceTree = "<group>"; };
 		3188652D1DC838D8009F03BB /* UIImage+ZJWallPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZJWallPaper.h"; sourceTree = "<group>"; };
 		3188652E1DC838D8009F03BB /* UIImage+ZJWallPaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZJWallPaper.m"; sourceTree = "<group>"; };
+		31EE274D206C8EEE00D1C347 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		BCE767A51BDC8AD70020D5E4 /* guid2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid2.png; sourceTree = "<group>"; };
 		BCE767A61BDC8AD70020D5E4 /* guid1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid1.png; sourceTree = "<group>"; };
 		BCE767A91BDC8B650020D5E4 /* guid4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guid4.png; sourceTree = "<group>"; };
@@ -959,6 +961,7 @@
 		BCFB3B951BCE7A5C00D516DC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				31EE274D206C8EEE00D1C347 /* appIcon.png */,
 				BCF69E2F1BDDFCCA0062A0F6 /* moreHead.png */,
 				BCF34D591BD0EB4700253D0E /* location@2x.png */,
 				BCE767E21BDCE3960020D5E4 /* mingren.png */,
@@ -1315,8 +1318,8 @@
 				TargetAttributes = {
 					BCFB3A471BCE797700D516DC = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 432VNC2Y8Q;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = HQDTGRH8YR;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -1364,6 +1367,7 @@
 				BCF497171BD4D9CA004C5B76 /* UMSShareListController.xib in Resources */,
 				BCF497101BD4D9CA004C5B76 /* UMSCommentDetailController.xib in Resources */,
 				BCE767AA1BDC8B650020D5E4 /* guid4.png in Resources */,
+				31EE274E206C8EEE00D1C347 /* appIcon.png in Resources */,
 				BCE767A81BDC8AD70020D5E4 /* guid1.png in Resources */,
 				BCF4FDDD1BD8B8F500837AE4 /* duihao.jpg in Resources */,
 				BCF497181BD4D9CA004C5B76 /* UMSocialSDKResourcesNew.bundle in Resources */,
@@ -1660,9 +1664,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HQDTGRH8YR;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1679,8 +1683,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3022966d-393a-453d-9a18-cceb1425613d";
+				PROVISIONING_PROFILE_SPECIFIER = "China Daily Test";
 			};
 			name = Debug;
 		};
@@ -1689,9 +1693,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HQDTGRH8YR;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1708,8 +1712,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3022966d-393a-453d-9a18-cceb1425613d";
+				PROVISIONING_PROFILE_SPECIFIER = "China Daily Test";
 			};
 			name = Release;
 		};
