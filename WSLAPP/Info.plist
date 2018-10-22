@@ -120,6 +120,8 @@
 	<string>是否允许此App使用你的相机</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>如果你喜欢我,请允许我定位吧！</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>请允许我访问你的照片库？</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>是否允许此App访问你的相册</string>
 	<key>Privacy - Location Always Usage Description </key>
